@@ -20,11 +20,11 @@ jobs:
         name: ${{ env.GITHUB_RUN_ID }}
 #       name: `issueoutput_${process.env['GITHUB_RUN_ID']}`
  #       name: 'my-artifact'
-        path: ${{steps.upload.outputs.issuesDirPath}}
+        path: ${{ steps.upload.outputs.issuesDirPath }}
 #       path: path/to/artifacts
 
     - name: 'Echo download path'
-      run: echo ${{steps.download.outputs.download-path}}
+      run: echo ${{ steps.download.outputs.download-path }}
 
     - uses: dawidd6/action-send-mail@v3
       with:
