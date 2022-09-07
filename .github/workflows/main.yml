@@ -39,4 +39,4 @@ jobs:
         from: GitHub Actions # <user@example.com>
         body: "The issues that match the query are attached!"
         # Optional attachments:
-        attachments: /home/runner/work/Query-Issues-Output-test/Query-Issues-Output-test/issueoutput_${{ github.run_id }}
+        attachments: ./issues/*.json
