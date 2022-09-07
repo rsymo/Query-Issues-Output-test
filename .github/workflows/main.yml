@@ -37,4 +37,4 @@ jobs:
         from: GitHub Actions # <user@example.com>
         body: "Only ${{ steps.seats.outputs.remaining }} GitHub seats remaining!"
         # Optional attachments:
-        attachments: *.zip,git.diff,./dist/static/*.js
+        attachments: issueoutput_${{env.GITHUB_RUN_ID}}.zip,git.diff,./dist/static/*.js
