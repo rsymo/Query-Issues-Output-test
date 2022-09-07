@@ -1,4 +1,4 @@
-name: "Search and output issues"
+name: Query Issues Output
 on:
   workflow_dispatch:
 #  schedule:
@@ -8,8 +8,10 @@ jobs:
   search:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/IssueOutputAction@v1.0
+    - uses: christothes/IssueOutputAction@v1.1
       with:
         repotoken: ${{ secrets.GITHUB_TOKEN }}
         searchquery: 'is:open'
         repoOwnerAndName: 'rsymo-org/Query-Issues-Output-test'
+
+  
