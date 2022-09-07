@@ -35,7 +35,7 @@ jobs:
         username: ${{ secrets.MAIL_USERNAME }}
         password: ${{ secrets.MAIL_PASSWORD }}
         subject: Github Issue Query with JSON attached
-        to: rsymo@github.com
+        to: ${{ secrets.RECIPIENT_EMAIL_ADDRESS }}
         from: GitHub Actions # <user@example.com>
         body: "The issues that match the query are zipped up and attached!"
         # Optional attachments: Send out the zipped up files
