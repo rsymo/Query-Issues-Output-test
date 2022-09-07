@@ -17,7 +17,7 @@ jobs:
     - uses: actions/download-artifact@v3
       id: download
       with:
-        name: ${{process.env.GITHUB_RUN_ID}}
+        name: ${{env.GITHUB_RUN_ID}}
 #       name: `issueoutput_${process.env['GITHUB_RUN_ID']}`
  #       name: 'my-artifact'
         path: ${{steps.upload.outputs.issuesDirPath}}
