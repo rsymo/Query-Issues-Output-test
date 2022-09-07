@@ -26,3 +26,15 @@ jobs:
     - name: 'Echo download path'
       run: echo ${{steps.download.outputs.download-path}}
 
+    - uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 465
+        username: ${{ secrets.MAIL_USERNAME }}
+        password: ${{ secrets.MAIL_PASSWORD }}
+        subject: Github Issue Query with JSON attached
+        to: rsymo@github.com
+        from: GitHub Actions # <user@example.com>
+        body: "Only ${{ steps.seats.outputs.remaining }} GitHub seats remaining!"
+        # Optional attachments:
+        attachments: *.zip,git.diff,./dist/static/*.js
