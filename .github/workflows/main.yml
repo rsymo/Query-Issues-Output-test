@@ -13,7 +13,8 @@ jobs:
       with:
         repotoken: ${{ secrets.GITHUB_TOKEN }}
         searchquery: 'is:open'
-        repoOwnerAndName: 'rsymo-org/Query-Issues-Output-test'  
+        repoOwnerAndName: 'rsymo-org/Query-Issues-Output-test' 
+        run: ls -la
     - uses: actions/download-artifact@v3
       id: download
       with:
