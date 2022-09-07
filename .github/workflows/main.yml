@@ -28,6 +28,9 @@ jobs:
 #      run: echo ${{ steps.download.outputs.download-path }}
       run: cd issues; ls -la 
 
+    - name: Zip files
+      run: zip -r issues.zip ./issues
+
     - uses: dawidd6/action-send-mail@v3
       with:
         server_address: smtp.gmail.com
@@ -39,4 +42,4 @@ jobs:
         from: GitHub Actions # <user@example.com>
         body: "The issues that match the query are attached!"
         # Optional attachments:
-        attachments: ./issues/*.json
+        attachments: ./issues/*.json,issues.zip
