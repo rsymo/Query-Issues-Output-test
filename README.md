@@ -12,6 +12,7 @@ https://github.com/rsymo-org/Query-Issues-Output-test/blob/main/.github/workflow
 
 # To make this work:
 1. Setup Repository secrets for: 
+- RECIPIENT_EMAIL_ADDRESS - your email; or whereever you want the zipped issue JSON files to be emailed to
 - MAIL_USERNAME - Gmail account username
 - MAIL_PASSWORD - Gmail token - some info: https://devanswers.co/create-application-specific-password-gmail/
 - TOKEN - your GitHub PAT - docs: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
