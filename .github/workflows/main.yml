@@ -17,7 +17,7 @@ jobs:
     - uses: actions/download-artifact@v3
       id: download
       with:
-        name: ${{ env.GITHUB_RUN_ID }}
+        name: ${{ github.run.id }}
 #       name: `issueoutput_${process.env['GITHUB_RUN_ID']}`
  #       name: 'my-artifact'
         path: ${{ steps.upload.outputs.issuesDirPath }}
@@ -35,6 +35,6 @@ jobs:
         subject: Github Issue Query with JSON attached
         to: rsymo@github.com
         from: GitHub Actions # <user@example.com>
-        body: "Only ${{ steps.seats.outputs.remaining }} GitHub seats remaining!"
+        body: "The issues that match the query are attached!"
         # Optional attachments:
-        attachments: issueoutput_${{ env.GITHUB_RUN_ID }}.zip,git.diff,./dist/static/*.js
+        attachments: issueoutput_${{ github.run.id }}.zip,git.diff,./dist/static/*.js
