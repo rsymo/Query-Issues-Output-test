@@ -26,7 +26,7 @@ jobs:
 
     - name: 'Echo download path'
 #      run: echo ${{ steps.download.outputs.download-path }}
-      run: ls -la
+      run: cd issues; ls -la 
 
     - uses: dawidd6/action-send-mail@v3
       with:
