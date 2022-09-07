@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: christothes/IssueOutputAction@v1.1
+      id: upload
       with:
         repotoken: ${{ secrets.GITHUB_TOKEN }}
         searchquery: 'is:open'
@@ -16,9 +17,11 @@ jobs:
     - uses: actions/download-artifact@v3
       id: download
       with:
-        name: 'issueoutput_3005026345'
+        name: 'issueoutput_${process.env[`GITHUB_RUN_ID`]}'
  #       name: 'my-artifact'
-        path: path/to/artifacts
+        path: ${{steps.upload.outputs.issuesDirPath}}
+#       path: path/to/artifacts
 
     - name: 'Echo download path'
       run: echo ${{steps.download.outputs.download-path}}
+
