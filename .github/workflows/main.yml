@@ -14,7 +14,7 @@ jobs:
         repotoken: ${{ secrets.GITHUB_TOKEN }}
         searchquery: 'is:open'
         repoOwnerAndName: 'rsymo-org/Query-Issues-Output-test' 
-        run: ls -la
+
     - uses: actions/download-artifact@v3
       id: download
       with:
@@ -26,6 +26,7 @@ jobs:
 
     - name: 'Echo download path'
       run: echo ${{ steps.download.outputs.download-path }}
+      run: ls -la
 
     - uses: dawidd6/action-send-mail@v3
       with:
