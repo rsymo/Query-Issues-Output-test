@@ -37,7 +37,7 @@ jobs:
         subject: Github Issue Query with JSON attached
         to: rsymo@github.com
         from: GitHub Actions # <user@example.com>
-        body: "The issues that match the query are attached!"
+        body: "The issues that match the query are zipped up and attached!"
         # Optional attachments: Send out the zipped up files
         attachments: issues.zip
         # Optional attachments: Send out the JSON files all attached to the email
