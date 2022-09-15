@@ -23,3 +23,6 @@ https://github.com/rsymo-org/Query-Issues-Output-test/blob/main/.github/workflow
 - "Run Workflow" from branch:main
 - Wait a minute for a runner to pick it up and process the request (the time to run this workflow will depend on the number of issues matching the query)
 - Check the email you set as "RECIPIENT_EMAIL_ADDRESS"
+
+
+test
