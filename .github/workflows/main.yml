@@ -15,7 +15,7 @@ jobs:
         searchquery: 'is:open'
         repoOwnerAndName: 'rsymo-org/Query-Issues-Output-test' 
 
-    - uses: actions/download-artifact@v3
+    - uses: actions/download-artifact@v4.1.7
       id: download
       with:
         name: issueoutput_${{ github.run_id }}
